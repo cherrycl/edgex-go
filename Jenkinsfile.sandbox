@@ -3,19 +3,25 @@ pipeline {
     stages {
         stage ('Checkout Compose Repository') {
             steps {
-                checkout([$class: 'GitSCM',
-                    branches: [[name: "refs/heads/issue-579"]],
-                    doGenerateSubmoduleConfigurations: false,
-                    extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: '']],
-                    submoduleCfg: [],
-                    userRemoteConfigs: [[url: 'https://github.com/cherrycl/ci-management.git']]
-                ])
+                dir (./ci-management) {
+                    checkout([$class: 'GitSCM',
+                        branches: [[name: "refs/heads/issue-579"]],
+                        doGenerateSubmoduleConfigurations: false,
+                        extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: '']],
+                        submoduleCfg: [],
+                        userRemoteConfigs: [[url: 'https://github.com/cherrycl/ci-management.git']]
+                    ])
+                }
+                
             }
         }
         stage ('Push swagger') {
             steps {
-                sh 'chmod +x shell/*'
-                sh './shell/edgex-publish-swagger.sh'
+                dir (./ci-management) {
+                    sh 'chmod +x shell/*'
+                    sh './shell/edgex-publish-swagger.sh'
+                }
+                
             }
             
         }
