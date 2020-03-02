@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Checkout Compose Repository') {
             steps {
-                dir (./ci-management) {
+                dir ('./ci-management') {
                     checkout([$class: 'GitSCM',
                         branches: [[name: "refs/heads/issue-579"]],
                         doGenerateSubmoduleConfigurations: false,
@@ -17,7 +17,7 @@ pipeline {
         }
         stage ('Push swagger') {
             steps {
-                dir (./ci-management) {
+                dir ('./ci-management') {
                     sh 'chmod +x shell/*'
                     sh './shell/edgex-publish-swagger.sh'
                 }
