@@ -18,10 +18,11 @@ pipeline {
         stage ('Push swagger') {
             steps {
                 dir ('./ci-management') {
-                    sh 'chmod +x shell/*'
-                    sh './shell/edgex-publish-swagger.sh'
+                    withCredentials([string(credentialsId: 'swaggerhub-api-key', variable: 'API_KEY')]) {
+                        sh 'chmod +x shell/*'
+                        sh './shell/edgex-publish-swagger.sh'
+                    }
                 }
-                
             }
             
         }
