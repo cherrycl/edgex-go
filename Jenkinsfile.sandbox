@@ -1,5 +1,5 @@
 pipeline {
-    options {timestamps()}
+    agent { label "${params.SLAVE}" }
     stages {
         stage ('Checkout Compose Repository') {
             steps {
@@ -13,8 +13,11 @@ pipeline {
             }
         }
         stage ('Push swagger') {
-            sh 'chmod +x shell/*'
-            sh './shell/edgex-publish-swagger.sh'
+            steps {
+                sh 'chmod +x shell/*'
+                sh './shell/edgex-publish-swagger.sh'
+            }
+            
         }
     }
 }
