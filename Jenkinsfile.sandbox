@@ -18,9 +18,9 @@ pipeline {
         stage ('Push swagger') {
             steps {
                 dir ('./ci-management') {
-                    withCredentials([string(credentialsId: 'swaggerhub-api-key', variable: 'APIKEY')]) {
+                    withCredentials([string(credentialsId: 'swaggerhub-api-key', variable: 'API_KEY')]) {
                         sh 'chmod +x shell/*'
-                        sh 'export APIKEY=323232; ./shell/edgex-publish-swagger.sh'
+                        sh './shell/edgex-publish-swagger.sh'
                     }
                 }
             }
