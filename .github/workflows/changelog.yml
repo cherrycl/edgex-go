@@ -46,20 +46,6 @@ jobs:
           minor=${parts[1]}
           patch=${parts[2]}
 
-          # Check if the latest tag is a dev version (e.g., v4.0.0-dev.35)
-          if [[ ! "$latest_tag" =~ -dev\.[0-9]+$ ]]; then
-            # If it's a stable version, check for commit types to decide versioning
-            if git log -1 --pretty=%B | grep -q "^feat:"; then
-              minor=$((minor + 1))
-              patch=0  # Reset patch version on minor bump
-            else
-              patch=$((patch + 1))
-            fi
-          else
-            # Increment patch version for dev versions
-            patch=$((patch + 1))
-          fi
-
           new_version="v$major.$minor.$patch"
           echo "new_version=$new_version" >> $GITHUB_ENV
 
