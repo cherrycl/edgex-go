@@ -40,13 +40,9 @@ jobs:
 
           # Parse the latest version number (ignore 'dev' tags for increment)
           latest="${latest_tag//-dev.*/}"  # Remove the leading '-dev'
-          latest="${latest_tag//$v/}"  # Remove the leading 'v'
-          IFS='.' read -r -a parts <<< "$latest"
-          major=${parts[0]}
-          minor=${parts[1]}
-          patch=${parts[2]}
+          latest="${latest_tag//v/}"  # Remove the leading 'v'
 
-          new_version="v$major.$minor.$patch"
+          new_version="v$latest"
           echo "new_version=$new_version" >> $GITHUB_ENV
 
       - name: Merge Changelog for All Tags
