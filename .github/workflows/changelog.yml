@@ -1,35 +1,31 @@
-name: Generate Changelog
+name: Auto Update Changelog
 
 on:
   push:
     branches:
-      - changelog-test  # or the default branch of your project
+      - changelog-test
+  workflow_dispatch:  # Allow manual trigger
 
 jobs:
-  changelog:
+  update_changelog:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-
-      - name: Set up Rust (for git-cliff)
-        uses: actions/setup-rust@v1
-        with:
-          rust-version: 'stable'
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Install git-cliff
-        run: cargo install git-cliff
-
-      - name: Generate changelog
-        run: git-cliff
-
-      - name: Commit and push changelog
         run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
+          curl -sSL https://github.com/orhun/git-cliff/releases/download/v2.8.0/git-cliff-2.8.0-x86_64-unknown-linux-gnu.tar.gz | tar -xz
+          mv git-cliff-2.8.0/git-cliff /usr/local/bin
+
+      - name: Generate Changelog
+        run: git-cliff --unreleased --prepend CHANGELOG.md
+
+      - name: Commit & Push Changelog
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
           git add CHANGELOG.md
-          git commit -m "Update changelog"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git commit -m "Update CHANGELOG" || echo "No changes to commit"
+          git push origin main || echo "No changes to push"
