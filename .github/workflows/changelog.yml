@@ -65,7 +65,7 @@ jobs:
       - name: Merge Changelog for All Tags
         run: |
           # Generate changelog, skipping 'dev' tags and focusing on commits
-          git-cliff --unreleased --tag="${{ env.tags }}" --skip-tag-pattern="dev" --prepend CHANGELOG.md
+          git-cliff --unreleased --tag="${{ env.tags }}" --tag-pattern="^v?(\\d+\\.\\d+\\.\\d+)" --prepend CHANGELOG.md
 
 
       - name: Commit & Push Changelog
