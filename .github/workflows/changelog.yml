@@ -19,8 +19,25 @@ jobs:
           curl -sSL https://github.com/orhun/git-cliff/releases/download/v2.8.0/git-cliff-2.8.0-x86_64-unknown-linux-gnu.tar.gz | tar -xz
           mv git-cliff-2.8.0/git-cliff /usr/local/bin
 
+      - name: Get Latest Tag
+        id: get_latest_tag
+        run: |
+          latest_tag=$(git describe --tags --abbrev=0 || echo "v0.0.0")
+          echo "latest_tag=$latest_tag" >> $GITHUB_ENV
+
+      - name: Calculate Next Version
+        id: next_version
+        run: |
+          latest="${{ env.latest_tag }}"
+          IFS='.' read -r -a parts <<< "${latest//v/}"
+          major=${parts[0]}
+          minor=${parts[1]}
+          patch=${parts[2]}
+          new_version="v$major.$minor.$((patch + 1))"
+          echo "new_version=$new_version" >> $GITHUB_ENV
+
       - name: Generate Changelog
-        run: git-cliff --unreleased --prepend CHANGELOG.md
+        run: git-cliff --unreleased --tag "${{ env.new_version }}" --prepend CHANGELOG.md
 
       - name: Commit & Push Changelog
         run: |
