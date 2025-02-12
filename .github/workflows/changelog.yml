@@ -39,8 +39,8 @@ jobs:
           latest_tag=$(git describe --tags --abbrev=0 || echo "v0.0.0")
 
           # Parse the latest version number (ignore 'dev' tags for increment)
-          latest="${latest_tag//-dev.*/}"  # Remove the leading '-dev'
-          latest="${latest_tag//v/}"  # Remove the leading 'v'
+          latest_no_dev="${latest_tag//-dev.*/}"  # Remove the leading '-dev'
+          latest="${latest_no_dev//v/}"  # Remove the leading 'v'
 
           new_version="v$latest"
           echo "new_version=$new_version" >> $GITHUB_ENV
