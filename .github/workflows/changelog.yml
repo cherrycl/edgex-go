@@ -19,36 +19,18 @@ jobs:
           curl -sSL https://github.com/orhun/git-cliff/releases/download/v2.8.0/git-cliff-2.8.0-x86_64-unknown-linux-gnu.tar.gz | tar -xz
           mv git-cliff-2.8.0/git-cliff /usr/local/bin
 
-      - name: Get All Tags
-        id: get_all_tags
+      - name: Get CommitId by Tag
+        id: get_commitid_by_tag
         run: |
           # Fetch all tags including dev and stable
-          git fetch --tags
+          commitId=$(git rev-list -n 1 v3.2.0-dev.1)
 
-          # List all tags and store in an environment variable
-          {
-            echo "tags<<EOF"
-            git tag -l | grep dev
-            echo "EOF"
-          } >> $GITHUB_ENV
+          echo "commitId=$commitId" >> $GITHUB_ENV
 
-      - name: Calculate Next Version
-        id: next_version
-        run: |
-          # Get the latest version tag, excluding dev tags
-          latest_tag=$(git describe --tags --abbrev=0 || echo "v0.0.0")
-
-          # Parse the latest version number (ignore 'dev' tags for increment)
-          latest_no_dev="${latest_tag//-dev.*/}"  # Remove the leading '-dev'
-          latest="${latest_no_dev//v/}"  # Remove the leading 'v'
-
-          new_version="v$latest"
-          echo "new_version=$new_version"
-
-      - name: Merge Changelog for All Tags
+      - name: Update Changelogs
         run: |
           # Generate changelog, skipping 'dev' tags and focusing on commits
-          git-cliff --unreleased --tag="${{ env.tags }}" --prepend CHANGELOG.md
+          git-cliff --prepend CHANGELOG.md -- ${{ env.commitId }}..HEAD
 
 
       - name: Commit & Push Changelog
