@@ -26,8 +26,11 @@ jobs:
           git fetch --tags
 
           # List all tags and store in an environment variable
-          tags=$(git tag -l)
-          echo "tags=$tags" >> $GITHUB_ENV
+          {
+            echo "tags<<EOF"
+            git tag -l
+            echo "EOF"
+          } >> $GITHUB_ENV
 
       - name: Calculate Next Version
         id: next_version
