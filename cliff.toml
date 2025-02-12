@@ -1,0 +1,27 @@
+[changelog]
+header = "# Changelog"
+footer = ""
+
+body = """
+{% for group, commits in commits | group_by(attribute="group") %}
+## [{{version}}] - {{timestamp}}
+### {{ group | upper_first }}
+{% for commit in commits %}
+- {{ commit.message }} ([{{ commit.id | truncate(length=7, end="") }}](https://github.com/edgexfoundry/edgex-go/commit/{{ commit.id }}))
+{% endfor %}
+{% endfor %}
+"""
+
+[commit]
+message_filters = [
+    { pattern = "^feat", group = "🚀 Features" },
+    { pattern = "^fix", group = "🐛 Bug Fixes" },
+    { pattern = "^chore", group = "🛠 Maintenance" },
+    { pattern = "^docs", group = "📖 Documentation" },
+    { pattern = "^test", group = "🧪 Testing" },
+    { pattern = "^refactor", group = "🔨 Refactoring" }
+]
+
+[git]
+topo_order = true
+merge = true
