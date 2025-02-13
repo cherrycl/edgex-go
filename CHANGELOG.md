@@ -12,6 +12,716 @@
 - [go-mod-secrets](https://github.com/edgexfoundry/go-mod-secrets/blob/main/CHANGELOG.md)
 - [go-mod-configuration](https://github.com/edgexfoundry/go-mod-configuration/blob/main/CHANGELOG.md) (indirect dependency)
 
+## [[Wait for merging]] Changelog
+## [4.0.0-dev.55] - 2025-02-11
+
+### ✨ Features
+
+- fix comment typo ([7b17400](https://github.com/edgexfoundry/edgex-go/commit/7b17400d77db6476707ec2f3db2663e1be19f0be))
+
+## [4.0.0-dev.54] - 2025-02-10
+
+### ✨ Features
+
+- revise DB schema initialVersion to 4.0.0-dev ([68d0f35](https://github.com/edgexfoundry/edgex-go/commit/68d0f35149ff6116b92137ef0fc6799ae3764763))
+
+## [4.0.0-dev.53] - 2025-02-10
+
+### ✨ Features
+
+- Add DB schema migration mechanism (#5073) ([6313903](https://github.com/edgexfoundry/edgex-go/commit/63139032be4d16dbd5c4c048fde0529458690203))
+
+## [4.0.0-dev.52] - 2025-02-07
+
+### ✨ Features
+
+- Upgrade go-mod-messaging and remove event size check ([cafc722](https://github.com/edgexfoundry/edgex-go/commit/cafc7220272db75275058deb04c0a161acd7b921))
+
+## [4.0.0-dev.49] - 2025-01-21
+
+### ✨ Features
+
+- Add query parameters for device parents/children. (#5053) ([a1c5a89](https://github.com/edgexfoundry/edgex-go/commit/a1c5a899654eae7656c51fcf435c291ced400fbb))
+
+## [4.0.0-dev.48] - 2025-01-20
+
+### 🐛 Bug Fixes
+
+- Add clients to service config ([6c90d74](https://github.com/edgexfoundry/edgex-go/commit/6c90d74595ded570daa432ac84bb0889cbffd42b))
+
+## [4.0.0-dev.47] - 2025-01-20
+
+### ✨ Features
+
+- Allow purging events ([464389f](https://github.com/edgexfoundry/edgex-go/commit/464389f2b4c69318f66adc0d56ad4bda5a15fa05))
+
+## [4.0.0-dev.46] - 2025-01-17
+
+### ✨ Features
+
+- Query readings without pagination offset ([ccee771](https://github.com/edgexfoundry/edgex-go/commit/ccee771edf5ea3cf821193a796fbd9303c0d3f83))
+
+## [4.0.0-dev.44] - 2025-01-15
+
+### ✨ Features
+
+- Save postgres superuser password in secretstore (#5051) ([623cb52](https://github.com/edgexfoundry/edgex-go/commit/623cb5265308e9e287d4ae93d4d167a887956af5))
+
+## [4.0.0-dev.43] - 2025-01-15
+
+### 🐛 Bug Fixes
+
+- Add svc client handler to some services ([1371a7d](https://github.com/edgexfoundry/edgex-go/commit/1371a7d047233c9da69f38f2eca1c2ba68f09fd8))
+
+## [4.0.0-dev.42] - 2025-01-13
+
+### 🐛 Bug Fixes
+
+- Fix the ScheduleJob out-of-sync issue ([9100ac2](https://github.com/edgexfoundry/edgex-go/commit/9100ac240e6a97fe5a84fed5dc78596f5db1e64b))
+
+## [4.0.0-dev.41] - 2025-01-10
+
+### 🐛 Bug Fixes
+
+- Add the /key path to API gateaway ([2a92b0a](https://github.com/edgexfoundry/edgex-go/commit/2a92b0a04701fe7fb86f08b1660cb5e81c369ddf))
+
+## [4.0.0-dev.40] - 2025-01-10
+
+### 🐛 Bug Fixes
+
+- Upgrade go-mod-bootstrap version ([74fc147](https://github.com/edgexfoundry/edgex-go/commit/74fc147229b941eec6cae2ca42dc89731dc1d35c))
+
+## [4.0.0-dev.38] - 2025-01-10
+
+### ✨ Features
+
+- Update reading table schema ([4adb933](https://github.com/edgexfoundry/edgex-go/commit/4adb933bda2f8cb0add680e16b68df3a1e502c17))
+
+## [4.0.0-dev.37] - 2025-01-09
+
+### 🐛 Bug Fixes
+
+- Remove unused users from the database user creation ([63893e0](https://github.com/edgexfoundry/edgex-go/commit/63893e059d12d2a62df0d1334bb688fbef613bdd))
+
+## [4.0.0-dev.36] - 2025-01-08
+
+### ✨ Features
+
+- Add key-related APIs in security-proxy-auth ([c38af36](https://github.com/edgexfoundry/edgex-go/commit/c38af36419feae83a0e8abbe505ba551fb0c9bf6))
+
+## [4.0.0-dev.35] - 2025-01-06
+
+### ✨ Features
+
+- Add MQTT and ZeroMQ channels support to support-notification ([e824200](https://github.com/edgexfoundry/edgex-go/commit/e8242006a0ff142114b7692597459189c0b5e284))
+
+## [4.0.0-dev.34] - 2025-01-06
+
+### ✨ Features
+
+- Add Acknowledged field to support-notification to enhance the API ([56a44d6](https://github.com/edgexfoundry/edgex-go/commit/56a44d62ebc49fa59a71c31ad67edb439138a09c))
+
+## [4.0.0-dev.32] - 2025-01-06
+
+### ✨ Features
+
+- Replace API route constants ([c7830c8](https://github.com/edgexfoundry/edgex-go/commit/c7830c8ac4d991be893c082d34d6c761a923a8c5))
+
+## [4.0.0-dev.26] - 2024-12-11
+
+### 🐛 Bug Fixes
+
+- Fix invalid limit issue with PostgreSQL ([3f02c68](https://github.com/edgexfoundry/edgex-go/commit/3f02c68d3e0b5122ed047bfb78be384dc5192cd3))
+
+## [4.0.0-dev.25] - 2024-12-10
+
+### 🐛 Bug Fixes
+
+- Revise response status code of create device API ([c33ac6e](https://github.com/edgexfoundry/edgex-go/commit/c33ac6e24b313b0b45f411378b8aae79e9f71d55))
+
+## [4.0.0-dev.24] - 2024-12-09
+
+### 🐛 Bug Fixes
+
+- Use correct service key for security proxy auth ([dc34042](https://github.com/edgexfoundry/edgex-go/commit/dc3404287ecb10157ee54f551e3ae491a4a35254))
+
+## [4.0.0-dev.22] - 2024-12-06
+
+### ✨ Features
+
+- refactor services to build monolithic service easily (#5010) ([98bb6eb](https://github.com/edgexfoundry/edgex-go/commit/98bb6ebf5936140bbb14ec64c05520fd1477cb0f))
+
+- Remove unused database users in secretstore-setup config ([d68fe42](https://github.com/edgexfoundry/edgex-go/commit/d68fe42ac0274be982d4948ef499c1aa8e24d339))
+
+## [4.0.0-dev.20] - 2024-11-19
+
+### 🐛 Bug Fixes
+
+- Using current time in UTC as default in Postgresql ([64c457b](https://github.com/edgexfoundry/edgex-go/commit/64c457ba637aca9533510dd358214ea1b7a9bb85))
+
+## [4.0.0-dev.19] - 2024-11-19
+
+### ✨ Features
+
+- Add new build-noziti and docker-noziti targets into Makefile ([8a1c9a0](https://github.com/edgexfoundry/edgex-go/commit/8a1c9a01a1f2d5a8ef23fa178018208c4e23c5cc))
+
+## [4.0.0-dev.18] - 2024-11-12
+
+### ♻ Refactor
+
+- Replace old Scheduler service with cron Scheduler service ([505c688](https://github.com/edgexfoundry/edgex-go/commit/505c688739c6baeb7936588b5c612c7d4ee74cdd))
+
+## [4.0.0-dev.15] - 2024-11-08
+
+### ✨ Features
+
+- Allow null reading for Postgres ([c31e431](https://github.com/edgexfoundry/edgex-go/commit/c31e4310fcd504ae1da8f47206d4caf8c29158e4))
+
+## [4.0.0-dev.14] - 2024-11-08
+
+### 🐛 Bug Fixes
+
+- use mocking MessageClient in unit tests ([65742a1](https://github.com/edgexfoundry/edgex-go/commit/65742a1b22839b66d016c3e03faa184970bd9ac3))
+
+## [4.0.0-dev.13] - 2024-11-08
+
+### 🐛 Bug Fixes
+
+- Make variable usage consistent in Makefile ([ce2b774](https://github.com/edgexfoundry/edgex-go/commit/ce2b7741ceacebd1826857a6e920edbaaaa6a7b7))
+
+## [4.0.0-dev.12] - 2024-11-08
+
+### 🐛 Bug Fixes
+
+- check offset, limit, totalCount before querying transmissions ([82df6aa](https://github.com/edgexfoundry/edgex-go/commit/82df6aa76d7e5e8e8165c23ce0e8560af0818afb))
+
+## [4.0.0-dev.11] - 2024-11-08
+
+### 🐛 Bug Fixes
+
+- Only one ldflags flag is allowed ([fcb5d6c](https://github.com/edgexfoundry/edgex-go/commit/fcb5d6c99dbec038e1b3b8f6405170469af5ccc2))
+
+## [4.0.0-dev.9] - 2024-11-04
+
+### 📖 Documentation
+
+- Add onChangeThreshold in Device AutoEvent ([941e1e5](https://github.com/edgexfoundry/edgex-go/commit/941e1e5ece8eb6540d9aaaa9956a0c886ebb71db))
+
+## [4.0.0-dev.6] - 2024-10-30
+
+### ✨ Features
+
+- Remove consul dependency ([cbe9dac](https://github.com/edgexfoundry/edgex-go/commit/cbe9dacb0aa5af2c2c08753c4199293e4457ef93))
+
+## [4.0.0-dev.5] - 2024-10-29
+
+### 🐛 Bug Fixes
+
+- Add the Database related config back to SecretStore Setup ([e50f344](https://github.com/edgexfoundry/edgex-go/commit/e50f3449e20572125b92625ae317cdfb1f944488))
+
+## [4.0.0-dev.4] - 2024-10-28
+
+### 🐛 Bug Fixes
+
+- Add the Database related config back to Core Keeper ([7801bd9](https://github.com/edgexfoundry/edgex-go/commit/7801bd9144aa252f31c9e5ec79986d6dc0379948))
+
+## [4.0.0-dev.3] - 2024-10-28
+
+### ♻ Refactor
+
+- update module to v4 ([da73523](https://github.com/edgexfoundry/edgex-go/commit/da735230bec8d3079658cac996101c0c1901d17e))
+
+- replace vault with openbao ([2fd20ad](https://github.com/edgexfoundry/edgex-go/commit/2fd20adf2de51a59e2f08b9fbb81467a4bed6eac))
+
+## [4.0.0-dev.2] - 2024-10-25
+
+### 🐛 Bug Fixes
+
+- Update default database to PostgreSQL in v4 (#4981) ([c89e7d4](https://github.com/edgexfoundry/edgex-go/commit/c89e7d447dc09ce70dc7b00762475a7ed7258b44))
+
+## [4.0.0-dev.1] - 2024-10-22
+
+### 🐛 Bug Fixes
+
+- Move API document files from openapi/v3 to openapi ([c7c3680](https://github.com/edgexfoundry/edgex-go/commit/c7c3680392ce68a6fcb1eaf602bff8de280a2107))
+
+
+### ♻ Refactor
+
+- separate count and query functions in DB interface ([803138e](https://github.com/edgexfoundry/edgex-go/commit/803138eab89292506fff25623a654a487eec4213))
+
+## [3.2.0-dev.109] - 2024-10-21
+
+### 🐛 Bug Fixes
+
+- check offset, limit, totalCount before executing query ([b7d163c](https://github.com/edgexfoundry/edgex-go/commit/b7d163c49bb6e4291a16d32f0475986ccc100d11))
+
+## [3.2.0-dev.108] - 2024-10-17
+
+### ✨ Features
+
+- Using isNull field instead of nil reading value (#4974) ([82350b2](https://github.com/edgexfoundry/edgex-go/commit/82350b2dc17c64c6dcaf341c305da1b72442d937))
+
+## [3.2.0-dev.107] - 2024-10-16
+
+### 🐛 Bug Fixes
+
+- fix delete transmission by age with Postgres ([3517e8a](https://github.com/edgexfoundry/edgex-go/commit/3517e8a61a815ce9955e3002ca3e1769cd3d83af))
+
+## [3.2.0-dev.106] - 2024-10-15
+
+### 🐛 Bug Fixes
+
+- fix subscriptions/notifications query with categories and labels ([08d93af](https://github.com/edgexfoundry/edgex-go/commit/08d93af539520120db3b1cadcd826c1c3a2c528c))
+
+## [3.2.0-dev.105] - 2024-10-14
+
+### 🐛 Bug Fixes
+
+- Check profile existence before adding device/provision watcher ([a09553d](https://github.com/edgexfoundry/edgex-go/commit/a09553d9be624636f508e9dfb2ede440f6f57f87))
+
+## [3.2.0-dev.104] - 2024-10-14
+
+### 🐛 Bug Fixes
+
+- Revise the flag name and add detailed comments ([858ca2e](https://github.com/edgexfoundry/edgex-go/commit/858ca2eef97bf1d85abcfc5d046776d68b9406fa))
+
+## [3.2.0-dev.103] - 2024-10-14
+
+### ✨ Features
+
+- Schedule action record retention implementation (#4966) ([39873e1](https://github.com/edgexfoundry/edgex-go/commit/39873e173f907ab191659c9eb82525abb097855c))
+
+## [3.2.0-dev.102] - 2024-10-12
+
+### ✨ Features
+
+- Enable ASLR and Full RELRO while building binaries as default ([babc124](https://github.com/edgexfoundry/edgex-go/commit/babc124801c941d32da667ad712ca5d717a91234))
+
+## [3.2.0-dev.100] - 2024-10-11
+
+### 🐛 Bug Fixes
+
+- Missing value in core data's readingsPersistedCounter issue ([a2924d3](https://github.com/edgexfoundry/edgex-go/commit/a2924d3243fa28b2ff611fcb6e1fe61eae221990))
+
+## [3.2.0-dev.99] - 2024-10-11
+
+### 🐛 Bug Fixes
+
+- fix notification/subscription with postgres DB issues ([23a7b39](https://github.com/edgexfoundry/edgex-go/commit/23a7b3905f680cd36c9eb4d1f84c72ebd059b1e6))
+
+## [3.2.0-dev.98] - 2024-10-09
+
+### 🐛 Bug Fixes
+
+- Arrange schedule job with gocron lib ([b114dff](https://github.com/edgexfoundry/edgex-go/commit/b114dff1ea479745780092049e43678c63104841))
+
+## [3.2.0-dev.97] - 2024-10-08
+
+### 🐛 Bug Fixes
+
+- Check if event id exists before deleting it ([d5aa4e6](https://github.com/edgexfoundry/edgex-go/commit/d5aa4e6cef3f5f939ed966b041f29eb420561edd))
+
+## [3.2.0-dev.96] - 2024-10-08
+
+### 🐛 Bug Fixes
+
+- Generate reading id if it's empty for postgres reading table ([7db4638](https://github.com/edgexfoundry/edgex-go/commit/7db4638c6619ee1720ed08f037e8655966befb58))
+
+## [3.2.0-dev.95] - 2024-10-08
+
+### 🐛 Bug Fixes
+
+- Add validation for update scheduleJob API ([c94b757](https://github.com/edgexfoundry/edgex-go/commit/c94b75765c681b3a5bfec0b7f1c5f8817a12445c))
+
+## [3.2.0-dev.94] - 2024-10-07
+
+### ✨ Features
+
+- Allow store reading as null value ([faff7e1](https://github.com/edgexfoundry/edgex-go/commit/faff7e15d0d593107ea324478509bb94221df236))
+
+## [3.2.0-dev.93] - 2024-10-07
+
+### 🐛 Bug Fixes
+
+- Delete device profile in use should return 409 ([d76678a](https://github.com/edgexfoundry/edgex-go/commit/d76678a55032731670294a652d9f06f9bdaaacb1))
+
+## [3.2.0-dev.92] - 2024-10-07
+
+### 🐛 Bug Fixes
+
+- Escape dash in Postgres init db script ([cd4614c](https://github.com/edgexfoundry/edgex-go/commit/cd4614c311f4a830a34440bf0eb740bffc8e40ea))
+
+## [3.2.0-dev.91] - 2024-10-07
+
+### 💼 Other
+
+- Upgrade core-contracts to v3.2.0-dev.48 ([1fce781](https://github.com/edgexfoundry/edgex-go/commit/1fce7814c5f00b05ba21a5b0325372e1b2b77a87))
+
+## [3.2.0-dev.90] - 2024-10-05
+
+### 🐛 Bug Fixes
+
+- fix slice init length ([51dc6ba](https://github.com/edgexfoundry/edgex-go/commit/51dc6ba05b95ad96b8bde78ec38a6c7b6e21eea8))
+
+## [3.2.0-dev.88] - 2024-10-04
+
+### 🐛 Bug Fixes
+
+- Add /support-cron-scheduler path in API gateway ([8f89b37](https://github.com/edgexfoundry/edgex-go/commit/8f89b373202c2820f2cd2e6064a8c253860a6468))
+
+## [3.2.0-dev.87] - 2024-10-03
+
+### 💼 Other
+
+- Upgrade to go-1.23, Linter1.61.0 and Alpine 3.20 ([3f8d8a8](https://github.com/edgexfoundry/edgex-go/commit/3f8d8a81a02c777b474a204e77eae531227cc529))
+
+## [3.2.0-dev.86] - 2024-10-02
+
+### ✨ Features
+
+- Add the force query param to add device metadata API (#4929) ([1033d52](https://github.com/edgexfoundry/edgex-go/commit/1033d5290f4fd751026052b6c6be6da923b73d23))
+
+## [3.2.0-dev.85] - 2024-10-01
+
+### ✨ Features
+
+- Add Token Config for support-cron-scheduler ([388a2b7](https://github.com/edgexfoundry/edgex-go/commit/388a2b7419ffcb5aa50e1d50d847b00852022c29))
+
+## [3.2.0-dev.84] - 2024-10-01
+
+### ✨ Features
+
+- Update security-secretstore-setup config ([da59c5e](https://github.com/edgexfoundry/edgex-go/commit/da59c5e12709b74f9132aa1a743077f3fe39ebf1))
+
+## [3.2.0-dev.83] - 2024-09-27
+
+### 🐛 Bug Fixes
+
+- Use int64 instead of int for all the timestamp ([4ddefa4](https://github.com/edgexfoundry/edgex-go/commit/4ddefa4886004faa11111ff6055cc25bdb398a5d))
+
+- Add unit tests to http util functions ([d105d12](https://github.com/edgexfoundry/edgex-go/commit/d105d1249a6011ef50d1ed48e2937c9ef761d5c1))
+
+## [3.2.0-dev.82] - 2024-09-26
+
+### ✨ Features
+
+- Add core-metadata device/provisionwatcher db methods for postgres ([fd73939](https://github.com/edgexfoundry/edgex-go/commit/fd73939b4ae038ef84b6f1c31c78656397dfc769))
+
+## [3.2.0-dev.81] - 2024-09-24
+
+### ✨ Features
+
+- Enhance Support Notifications to support PostgreSQL ([fdf0098](https://github.com/edgexfoundry/edgex-go/commit/fdf009802a644c1b131694915bc386a5ebbba6ef))
+
+## [3.2.0-dev.80] - 2024-09-23
+
+### ✨ Features
+
+- Add core-metadata device profile related db methods for postgres ([8fcc97a](https://github.com/edgexfoundry/edgex-go/commit/8fcc97ac3b77d3d3d46314474affe86593dec766))
+
+## [3.2.0-dev.79] - 2024-09-23
+
+### ✨ Features
+
+- Add core-metadata device service related db methods for postgres ([d88d55a](https://github.com/edgexfoundry/edgex-go/commit/d88d55a4444b4535f1718fc15c284767ad627f51))
+
+## [3.2.0-dev.77] - 2024-09-18
+
+### ✨ Features
+
+- Enhance Support Cron Scheduler persistence layer with PostgreSQL ([669a647](https://github.com/edgexfoundry/edgex-go/commit/669a6478e20c8f0e97becaa273bb01472356c3f2))
+
+## [3.2.0-dev.76] - 2024-09-18
+
+### 🐛 Bug Fixes
+
+- Return 404 response for Keeper GET key API with Postgres ([52b499c](https://github.com/edgexfoundry/edgex-go/commit/52b499ce14340e0f58b0d8cfd6aeda8b21674eae))
+
+## [3.2.0-dev.74] - 2024-09-13
+
+### ✨ Features
+
+- Add the Keeper registry db methods for Postgres ([a8bb910](https://github.com/edgexfoundry/edgex-go/commit/a8bb9105af1c6398587726f8b6be1dd5c186712b))
+
+## [3.2.0-dev.73] - 2024-09-13
+
+### ✨ Features
+
+- Support Postgres db in Core Keeper (#4911) ([2694c23](https://github.com/edgexfoundry/edgex-go/commit/2694c231f166e0770cb000984d707b3d46f47c88))
+
+
+### 🐛 Bug Fixes
+
+- Resolved job not found error that occurred after a failed update attempt (#4903) ([c631058](https://github.com/edgexfoundry/edgex-go/commit/c631058b2a2739a940fc36a69156d76351522c2f))
+
+## [3.2.0-dev.71] - 2024-09-10
+
+### 🐛 Bug Fixes
+
+- Fix the permission denied error in postgres_wait_install script (#4906) ([5f3d989](https://github.com/edgexfoundry/edgex-go/commit/5f3d989c215dce6f0c08a3e7dfab6442c7b0ab7f))
+
+## [3.2.0-dev.70] - 2024-09-10
+
+### ✨ Features
+
+- Automatically Trigger Missed Scheduled Jobs ([7c42c44](https://github.com/edgexfoundry/edgex-go/commit/7c42c442f21a33f30ae047fb2882440d9f71f387))
+
+
+### 🐛 Bug Fixes
+
+- Fix expired jobs and records should not be triggered and generated ([21db3a6](https://github.com/edgexfoundry/edgex-go/commit/21db3a63b67a0939892c10ac99221dcfb99b5ff7))
+
+## [3.2.0-dev.68] - 2024-09-09
+
+### 🐛 Bug Fixes
+
+- Fix the error while query reading with Postgres ([b28e27c](https://github.com/edgexfoundry/edgex-go/commit/b28e27c397a684cdafcfa7fc85b774e1d972bc3c))
+
+## [3.2.0-dev.67] - 2024-09-09
+
+### 🐛 Bug Fixes
+
+- Fix the wrong behavior when querying schedule action records ([88ea207](https://github.com/edgexfoundry/edgex-go/commit/88ea20729181eb12d7d41dd65a185ef9debd239e))
+
+## [3.2.0-dev.66] - 2024-09-09
+
+### 🐛 Bug Fixes
+
+- Generate new action ID while updating schedule job ([5ccf7c5](https://github.com/edgexfoundry/edgex-go/commit/5ccf7c5be7801eea3e2c8a5a18f8f224d1ea2eff))
+
+- ScheduleJob should not be triggered with endTimestamp expired ([61e9c8e](https://github.com/edgexfoundry/edgex-go/commit/61e9c8ed3565b3df7316b47603499815955aeac6))
+
+- Modify the HTTP status code of TriggerScheduleJobByName API ([47a4fcd](https://github.com/edgexfoundry/edgex-go/commit/47a4fcd215791b0bce88d1fb69b39ce9754e0fce))
+
+## [3.2.0-dev.65] - 2024-09-09
+
+### 🐛 Bug Fixes
+
+- Generate suitable HTTP status code ([21c2095](https://github.com/edgexfoundry/edgex-go/commit/21c2095bacfc2d1f692f1cd1392bc4d39528b6f3))
+
+- Update support-cron-scheduler API document ([f96c4cc](https://github.com/edgexfoundry/edgex-go/commit/f96c4cc6c16a2f181a54bdabc8b36913f4a8b8c4))
+
+## [3.2.0-dev.61] - 2024-08-27
+
+### ✨ Features
+
+- Support Querying ScheduleJob by Labels ([f270cd5](https://github.com/edgexfoundry/edgex-go/commit/f270cd5ce4eccf47d6f292fdbe79212ed72c743c))
+
+## [3.2.0-dev.60] - 2024-08-27
+
+### 🐛 Bug Fixes
+
+- Add more db config in service private configuration ([1f86b11](https://github.com/edgexfoundry/edgex-go/commit/1f86b117ef6b39eb5693270c0923cd7a247ad1b8))
+
+## [3.2.0-dev.59] - 2024-08-23
+
+### ✨ Features
+
+- Enhance LatestScheduleActionRecordsByJobName API (#4871) ([7f1d492](https://github.com/edgexfoundry/edgex-go/commit/7f1d4929ac2c17b75aa9890700086299dd17f9b6))
+
+## [3.2.0-dev.58] - 2024-08-21
+
+### ✨ Features
+
+- Integrate Core Data with Postgres on securiy mode ([5e7d4da](https://github.com/edgexfoundry/edgex-go/commit/5e7d4da3a4fe314df52ea4b32ed86886b933b3f0))
+
+## [3.2.0-dev.57] - 2024-08-20
+
+### ✨ Features
+
+- Add StartTimestamp and EndTimestamp for Cron Scheduler (#4868) ([f6f99ba](https://github.com/edgexfoundry/edgex-go/commit/f6f99ba4b961ab207b8eb6d15e7748acd28fde6d))
+
+## [3.2.0-dev.56] - 2024-08-19
+
+### ✨ Features
+
+- Generate Missed Schedule Action Records ([81769e7](https://github.com/edgexfoundry/edgex-go/commit/81769e7dc0f575b33646a54f05977ec5267f5808))
+
+
+### 🐛 Bug Fixes
+
+- Disable the default discovery scheduler (#4860) ([f0fad2e](https://github.com/edgexfoundry/edgex-go/commit/f0fad2eab06436c1c178943c34781e5eeebca59c))
+
+## [3.2.0-dev.55] - 2024-08-16
+
+### ✨ Features
+
+- Implement Schedule Action Records for Cron Scheduler ([337d8ae](https://github.com/edgexfoundry/edgex-go/commit/337d8ae65fe6bce9187badf1349e32edd1e48f47))
+
+## [3.2.0-dev.54] - 2024-08-16
+
+### ✨ Features
+
+- Add core-data postgres reading db client methods (#4862) ([9ed7212](https://github.com/edgexfoundry/edgex-go/commit/9ed72124ad2f01edf756a46c49444a389d468e72))
+
+## [3.2.0-dev.53] - 2024-08-15
+
+### 🐛 Bug Fixes
+
+- EDX-5196 Allow source name in regexp ([6211aaf](https://github.com/edgexfoundry/edgex-go/commit/6211aafc10b1e2f5b342071239385128acb78ae1))
+
+## [3.2.0-dev.52] - 2024-08-13
+
+### ✨ Features
+
+- Complete Schedule Job features and Add Unit Tests ([2fe50ba](https://github.com/edgexfoundry/edgex-go/commit/2fe50baefb41898c0b64cb13fefc71dfea2b2722))
+
+## [3.2.0-dev.51] - 2024-08-12
+
+### ✨ Features
+
+- Add core-data event related db methods for postgres (#4855) ([4ff1172](https://github.com/edgexfoundry/edgex-go/commit/4ff11727c7037816f98f6c0e9d374500f07cffc5))
+
+## [3.2.0-dev.50] - 2024-08-12
+
+### ✨ Features
+
+- Check AdminState in Cron Scheduler Service ([2583494](https://github.com/edgexfoundry/edgex-go/commit/25834942cf7cc470844d3205a4d0ccaaa8951f73))
+
+## [3.2.0-dev.49] - 2024-08-08
+
+### ✨ Features
+
+- Include Correlation ID in Logs ([f1ea895](https://github.com/edgexfoundry/edgex-go/commit/f1ea89513b7547867be39eb194b5913da90f13ad))
+
+## [3.2.0-dev.47] - 2024-08-07
+
+### ✨ Features
+
+- Implement Schedule Job Features (#4849) ([4508c6b](https://github.com/edgexfoundry/edgex-go/commit/4508c6b134dd8db5d14b2b122fe51143339f6eec))
+
+## [3.2.0-dev.44] - 2024-08-01
+
+### ✨ Features
+
+- Enhance security bootstrap to support Postgres ([806118c](https://github.com/edgexfoundry/edgex-go/commit/806118cc153c53a53cb626916b5a2c1173f80abf))
+
+
+### 🐛 Bug Fixes
+
+- Update generate Postgres credentials for multi services ([a5106a3](https://github.com/edgexfoundry/edgex-go/commit/a5106a348c7a29bba85bd6722546c8e795549622))
+
+- Add unit tests for postgres security bootstrapper ([34cdaf9](https://github.com/edgexfoundry/edgex-go/commit/34cdaf9b343b4cbb2fb9527331315604330cd3a9))
+
+## [3.2.0-dev.43] - 2024-08-01
+
+### ✨ Features
+
+- Implement Cron Scheduler Controller Package (#4844) ([c3f3a2e](https://github.com/edgexfoundry/edgex-go/commit/c3f3a2e890381eb1becc271f5487954b1eb8b608))
+
+## [3.2.0-dev.42] - 2024-07-31
+
+### ✨ Features
+
+- Implement support-cron-scheduler service persistence layer (#4837) ([b103c04](https://github.com/edgexfoundry/edgex-go/commit/b103c04882abc23661cee8905a92a31c1ff0bf6a))
+
+## [3.2.0-dev.41] - 2024-07-31
+
+### ✨ Features
+
+- Add message bus subscription log ([a6f6ea5](https://github.com/edgexfoundry/edgex-go/commit/a6f6ea5060545076c40d55fda1b913bd4da7e70a))
+
+## [3.2.0-dev.40] - 2024-07-30
+
+### 📖 Documentation
+
+- Set service version to 3.2.0 in API documents ([0736188](https://github.com/edgexfoundry/edgex-go/commit/0736188624eae5c5702e3af09400e87f332236a8))
+
+## [3.2.0-dev.39] - 2024-07-29
+
+### 📖 Documentation
+
+- Create OpenAPI docs for the new support-cron-scheduler service ([fed709e](https://github.com/edgexfoundry/edgex-go/commit/fed709e20da864cb4d02766373ee2139a34b5cec))
+
+## [3.2.0-dev.37] - 2024-07-19
+
+### ✨ Features
+
+- update go-mod-bootstrap dep ([5c04009](https://github.com/edgexfoundry/edgex-go/commit/5c04009ff751622e18bbeb55e4fc0158a67abd7d))
+
+## [3.2.0-dev.35] - 2024-07-12
+
+### ✨ Features
+
+- allow rules-engine service to read its token (#4823) ([5162257](https://github.com/edgexfoundry/edgex-go/commit/5162257f8dee1b2a6e96c0426af9cd51831dbfdc))
+
+## [3.2.0-dev.33] - 2024-07-10
+
+### 💼 Other
+
+- Bump spire version of images ([f201974](https://github.com/edgexfoundry/edgex-go/commit/f20197428163357c9c8348ca12cee6b40c05d180))
+
+## [3.2.0-dev.30] - 2024-07-05
+
+### ✨ Features
+
+- Core Keeper implementation ([e8726e3](https://github.com/edgexfoundry/edgex-go/commit/e8726e3ae68f2a04ddd2be347a70a833a7d3d060))
+
+- Changes based on OpenZiti changes ([04cf071](https://github.com/edgexfoundry/edgex-go/commit/04cf07131532277bda2d2e450382304785decfd1))
+
+## [3.2.0-dev.29] - 2024-07-05
+
+### ✨ Features
+
+- Implement Get All DeviceProfile BasicInfo API ([9494c74](https://github.com/edgexfoundry/edgex-go/commit/9494c7497b3c6dc9521145e4123e3d35bbdb8d94))
+
+## [3.2.0-dev.27] - 2024-07-02
+
+### ✨ Features
+
+- Allow empty profileName in Device ([702ba25](https://github.com/edgexfoundry/edgex-go/commit/702ba25b8e74ae87972de5b867e4c6885ac51f68))
+
+## [3.2.0-dev.26] - 2024-06-21
+
+### 💼 Other
+
+- Bump go-mod-core-contracts ([06aa0c4](https://github.com/edgexfoundry/edgex-go/commit/06aa0c44d737d2aa1863c7d06d6f4043ff2cf154))
+
+## [3.2.0-dev.23] - 2024-05-28
+
+### ✨ Features
+
+- Check the auto events before adding or updating the Device ([b5baed0](https://github.com/edgexfoundry/edgex-go/commit/b5baed0973659491019683a960c45c098e4a9e8f))
+
+- Add OpenZiti to edgex-go (#4777) ([d2d9888](https://github.com/edgexfoundry/edgex-go/commit/d2d98883e5139249b4399f4dc0dd90a078163ffc))
+
+- update attributions ([db030c2](https://github.com/edgexfoundry/edgex-go/commit/db030c23a710460b6d1b8803a66dbf6bacdc9290))
+
+- Add new bypassValidation query param to Add/Patch Device API (#4797) ([17930b1](https://github.com/edgexfoundry/edgex-go/commit/17930b14352cbfb7930b1ac1271c629a4bf190e4))
+
+## [3.2.0-dev.20] - 2024-03-04
+
+### ✨ Features
+
+- allow sending notifications to authenticated EdgeX endpoints (#4763) ([a48d639](https://github.com/edgexfoundry/edgex-go/commit/a48d6392372de4eada0148d46cda0c5092cdf95e))
+
+## [3.2.0-dev.11] - 2024-01-24
+
+### ✨ Features
+
+- Add new StoreForwardQueueSize metric to common App services config (#4751) ([3a892ac](https://github.com/edgexfoundry/edgex-go/commit/3a892ac0b38b8d685f9d63feb7dde70ee06d273b))
+
+## [3.2.0-dev.9] - 2024-01-08
+
+### ✨ Features
+
+- add support-notification fuzzing test (#4744) ([8cfc94c](https://github.com/edgexfoundry/edgex-go/commit/8cfc94cd75e30df1480b0ea8a4047b84af89fc1a))
+
+## [3.2.0-dev.4] - 2023-12-05
+
+### 💼 Other
+
+- Add ldflags to strip debug info from binaries (#4734) ([ebbd479](https://github.com/edgexfoundry/edgex-go/commit/ebbd479b391021732e21bea19cf1ff2caaa95a06))
+
+## [3.2.0-dev.1] - 2023-11-28
+
+### 💼 Other
+
+- Update to latest 3.2.0 dev go mods (#4731) ([97e9fbb](https://github.com/edgexfoundry/edgex-go/commit/97e9fbb8a484dc0c2ce89b12687694aa0705ba0b))
+
+<!-- generated by git-cliff -->
+
 ## [3.1.0] Napa - 2023-11-15 (Only compatible with the 3.x releases)
 
 ### ✨  Features
