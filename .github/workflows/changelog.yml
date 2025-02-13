@@ -29,12 +29,18 @@ jobs:
         id: git-cliff
         with:
           config: cliff.toml
-          args: -- ${{ env.commitId }}..HEAD --prepend CHANGELOG.md
+          args: -- ${{ env.commitId }}..HEAD
+        env:
+          OUTPUT: CHANGELOG_LATEST.md
+
+      - name: Prepend to CHANGELOG.md
+        run: |
+          cat CHANGELOG_LATEST.md CHANGELOG.md > temp_file && mv temp_file CHANGELOG.md
 
       - name: Commit & Push Changelog
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add CHANGELOG.md
-          git commit -m "Update CHANGELOG" || echo "No changes to commit"
+          git commit -m "docs: Update CHANGELOG for ${{version}}" || echo "No changes to commit"
           git push origin ${{ github.ref_name }} || echo "No changes to push"
