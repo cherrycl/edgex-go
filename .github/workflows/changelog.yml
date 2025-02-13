@@ -16,11 +16,23 @@ jobs:
         with:
           fetch-depth: 0  # Ensures all tags and history are fetched
 
+      - name: Get Latest and Next Stable Tag
+        id: version
+        run: |
+          # Get the latest stable version
+          latest_stable=$(git tag --sort=-v:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)
+
+          # Get the next major or minor version
+          next_version=$(git tag --sort=-v:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -n 1)
+
+          echo "LATEST_STABLE=$latest_stable" >> $GITHUB_ENV
+          echo "NEXT_VERSION=$next_version" >> $GITHUB_ENV
+
       - name: Get CommitId by Tag
         id: get_commitid_by_tag
         run: |
           # Fetch all tags including dev and stable
-          commitId=$(git rev-list -n 1 v3.1.1)
+          commitId=$(git rev-list -n 1 ${{ env.LATEST_STABLE }})
 
           echo "commitId=$commitId" >> $GITHUB_ENV
 
@@ -33,7 +45,7 @@ jobs:
         env:
           OUTPUT: CHANGELOG_LATEST.md
 
-      - name: Insert file1 into file2
+      - name: Prepend to CHANGELOG.md
         run: |
           awk -v f1="CHANGELOG_LATEST.md" '
           BEGIN {
@@ -55,5 +67,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add CHANGELOG.md
-          git commit -m "docs: Update CHANGELOG" || echo "No changes to commit"
+          git commit -m "docs: Update CHANGELOG for ${{ env.NEXT_VERSION }}" || echo "No changes to commit"
           git push origin ${{ github.ref_name }} || echo "No changes to push"
