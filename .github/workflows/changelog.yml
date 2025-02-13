@@ -25,7 +25,7 @@ jobs:
         id: get_commitid_by_tag
         run: |
           # Fetch all tags including dev and stable
-          commitId=$(git rev-list -n 1 v3.1.1)
+          commitId=$(git rev-list -n 1 v3.2.0-dev.1)
 
           echo "commitId=$commitId" >> $GITHUB_ENV
 
