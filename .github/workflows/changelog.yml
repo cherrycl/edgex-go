@@ -29,9 +29,9 @@ jobs:
         id: git-cliff
         with:
           config: cliff.toml
-          args: -- ${{ env.commitId }}..HEAD
+          args: -- ${{ env.commitId }}..HEAD --prepend
         env:
-          PREPEND: CHANGELOG.md
+          OUTPUT: CHANGELOG.md
 
       - name: Commit & Push Changelog
         run: |
