@@ -42,5 +42,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add CHANGELOG.md
-          git commit -m "docs: Update CHANGELOG for ${{version}}" || echo "No changes to commit"
+          git commit -m "docs: Update CHANGELOG" || echo "No changes to commit"
           git push origin ${{ github.ref_name }} || echo "No changes to push"
