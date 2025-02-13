@@ -1,0 +1,46 @@
+name: Generate and Download Changelog
+
+on:
+  push:
+    branches:
+      - changelog-test
+
+jobs:
+  generate-changelog:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby (required for github-changelog-generator)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+
+      - name: Install dependencies
+        run: |
+          gem install github-changelog-generator
+
+      - name: Generate Changelog
+        run: |
+          github_changelog_generator --token ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Upload Changelog as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: changelog
+          path: CHANGELOG.md
+
+  download-changelog:
+    runs-on: ubuntu-latest
+    needs: generate-changelog
+
+    steps:
+      - name: Download Changelog Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: changelog
+
+      - name: Show Changelog content
+        run: cat CHANGELOG.md
