@@ -3,7 +3,7 @@ name: Auto Update Changelog
 on:
   push:
     branches:
-      - main
+      - changelog-test
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
