@@ -23,8 +23,9 @@ jobs:
           latest_stable=$(git tag --sort=-v:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)
 
           # Get the next major or minor version
-          dev_tag=$(git tag --sort=-v:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+-dev[0-9]+$' | head -n 1)
-          next_version=$(echo "$dev_tag" | sed -E 's/-dev[0-9]+$//')
+          dev_tag=$(git tag --sort=-v:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+-dev.[0-9]+$' | head -n 1)
+          next_stable=$(echo "$dev_tag" | sed -E 's/-dev.[0-9]+$//')
+          next_version=$(echo "$next_stable" | sed -E 's/v//')
 
           echo "LATEST_STABLE=$latest_stable" >> $GITHUB_ENV
           echo "NEXT_VERSION=$next_version" >> $GITHUB_ENV
