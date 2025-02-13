@@ -25,10 +25,13 @@ jobs:
           echo "commitId=$commitId" >> $GITHUB_ENV
 
       - name: Update Changelogs
-        uses: orhun/git-cliff@v2.8.0
-        run: |
-          # Generate changelog, skipping 'dev' tags and focusing on commits
-          git-cliff --prepend CHANGELOG.md -- ${{ env.commitId }}..HEAD
+        uses: orhun/git-cliff-action@v4
+        id: git-cliff
+        with:
+          config: cliff.toml
+          args: -- ${{ env.commitId }}..HEAD
+        env:
+          PREPEND: CHANGELOG.md
 
 
       - name: Commit & Push Changelog
