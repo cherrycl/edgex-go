@@ -33,9 +33,22 @@ jobs:
         env:
           OUTPUT: CHANGELOG_LATEST.md
 
-      - name: Prepend to CHANGELOG.md
+      - name: Insert file1 into file2
         run: |
-          cat CHANGELOG_LATEST.md CHANGELOG.md > temp_file && mv temp_file CHANGELOG.md
+          awk -v f1="CHANGELOG_LATEST.md" '
+          BEGIN {
+              while ((getline line < f1) > 0) {
+                  content = content line "\n"
+              }
+              close(f1)
+          }
+          {
+              if (!inserted && $0 ~ /^## \[/) {
+                  print content
+                  inserted = 1
+              }
+              print
+          }' CHANGELOG.md > temp_file && mv temp_file CHANGELOG.md
 
       - name: Commit & Push Changelog
         run: |
